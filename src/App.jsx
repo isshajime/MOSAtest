@@ -1,36 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
 import './App.css'
 
+// import SetupPage from './pages/SetupPage';
+// import LoginPage from './pages/LoginPage';
+import Header from './components/layout/Header.jsx';
+import Title from './Title.jsx'
+import Income from './Income.jsx'
+import Footer from './components/layout/Footer.jsx';
+
+
+/**
+ * Serve as the root component of the application.
+ * Acts as the main container for app's structure and logic
+ * @returns 
+ */
 function App() {
-  const [count, setCount] = useState(0)
+  // To track if the user exists
+  // const [userExists, setUserExists] = userState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h2>Hello World</h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <Header />
+      <Title />
+      <Income />
+      <Footer />
+    </div>
   )
 }
 
 export default App
+
+
+

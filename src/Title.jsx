@@ -5,7 +5,6 @@ function Title() {
 
     return (
         <div>
-            <img ref={logoRef} src="/public/CoinWatcherLogo.png" alt="CoinWatcher Logo" style={{ width: '200px', height: 'auto' }} />
             <h1>CoinWatcher</h1>
             <h2>Track every coin, watch your budget with CoinWatcher</h2>
         </div>
