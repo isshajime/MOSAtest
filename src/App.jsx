@@ -18,11 +18,24 @@ function App() {
   // To track if the user exists
   // const [userExists, setUserExists] = userState(false);
 
+  // dashboard page
+  // return (
+  //   <div className="App">
+  //     <Header />
+  //     <Title />
+  //     <Income />
+  //     <Footer />
+  //   </div>
+  // )
+
+  // setup page
   return (
-    <div className="App">
+    <div className="AppSetupPage">
       <Header />
-      <Title />
-      <Income />
+      {/* <Title /> */}
+      <SetupPage />
+      {/* <LoginPage /> */}
+      {/* <Income /> */}
       <Footer />
     </div>
   )
