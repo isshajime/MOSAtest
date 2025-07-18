@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import './App.css'
 
-// import SetupPage from './pages/SetupPage';
+import SetupPage from './pages/SetupPage';
 // import LoginPage from './pages/LoginPage';
 import Header from './components/layout/Header.jsx';
 import Title from './Title.jsx'

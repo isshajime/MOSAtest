@@ -1,7 +1,9 @@
-import React from 'react';
 import './SetupPage.css';
 
+import React from 'react';
+
 function ProfileForm() {
+    
     const handleSubmitProfile = (event) => {
         event.preventDefault();
         const profileData = {
@@ -38,28 +40,29 @@ function FinancialDetailsForm() {
         setExpenseRows([...expenseRows, { expenseCategory: '', expenseBudget: '' }]);
     }
 
+    const handleIncomeChange = (value) => {
+        setIncomeAmount(value);
+    }
+
     const handleExpenseChange = (index, field, value) => {
-        const updatedRows = [...expenseRows];
-        updatedRows[index][field] = value;
-        setExpenseRows(updatedRows);
+        setExpenseRows(expenseRows =>
+            expenseRows.map((row, i) =>
+                i === index ? { ...row, [field]: value } : row
+            )  
+        );
     };
 
     // Handle when form submitted
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        setIncomeAmount(event.target.income.value);
-
-        // // Collect expense categories and budgets
-        // setExpenseRows(expenseRows.map(row => ({
-        //     expenseCategory: row.expenseCategory.trim(),
-        //     expenseBudget: row.expenseBudget.trim(),
-        // })));
         const financialDetails = {
-            income: event.target.income.value,
-            expenses: expenseRows.map(row => ({
-                expenseCategory: row.expenseCategory.trim(),
-                expenseBudget: row.expenseBudget.trim(),
+            incomeAmount: parseFloat(incomeAmount),
+            expenses: expenseRows
+                .filter(row => row.expenseCategory && row.expenseBudget)
+                .map(row => ({
+                    expenseCategory: row.expenseCategory.trim(),
+                    expenseBudget: row.expenseBudget.trim(),
             })),
         };
 
@@ -73,7 +76,13 @@ function FinancialDetailsForm() {
             <h2>Financial Details</h2>
             <div>
                 <label htmlFor="income">What is your annual income? </label>
-                <input type="number" id="income" name="income" />
+                <input 
+                    type="number" 
+                    id="income" 
+                    name="income" 
+                    value={incomeAmount}
+                    onChange={(e) => handleIncomeChange(e.target.value)}
+                />
             </div>
             <h3>Expense Categories</h3>
             {expenseRows.map((expenseRow, index) => (
@@ -96,12 +105,11 @@ function FinancialDetailsForm() {
                 />
             </div>
             ))}
-            {/* <div> */}
-                {/* <label htmlFor="expenses">Monthly expenses</label> */}
+            <div>
                 <button type="button" onClick={handleAddExpenseRow}>
-                Add Expense Category
+                    Add Expense Category
                 </button>
-            {/* </div> */}
+            </div>
             <button type="submit">
                 Submit
             </button>
