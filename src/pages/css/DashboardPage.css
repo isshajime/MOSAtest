@@ -1,0 +1,88 @@
+/* DashboardSkeleton.css - Dark mode friendly */
+
+:root {
+--bg-color: #1e1e1e;
+--card-bg: #2e2e2e;
+--input-bg: #2a2a2a;
+--text-color: #e0e0e0;
+--border-color: #444;
+--primary-color: #3a8dde;
+--primary-hover: #5a9ef0;
+}
+
+.dashboard-skeleton {
+max-width: 600px;
+margin: 2rem auto;
+font-family: sans-serif;
+background: var(--bg-color);
+color: var(--text-color);
+padding: 1rem;
+border-radius: 8px;
+}
+
+.card {
+background: var(--card-bg);
+padding: 1rem;
+border-radius: 6px;
+margin-bottom: 1.5rem;
+border: 1px solid var(--border-color);
+}
+
+.summary-card h2,
+.expenses-card h2 {
+margin-bottom: 0.5rem;
+color: var(--text-color);
+}
+
+.summary-card p {
+font-size: 1.5rem;
+margin: 0.25rem 0 1rem;
+color: var(--text-color);
+}
+
+.summary-card progress {
+width: 100%;
+height: 1rem;
+accent-color: var(--primary-color);
+}
+
+.summary-card span {
+display: block;
+text-align: right;
+margin-top: 0.25rem;
+color: var(--text-color);
+}
+
+.expense-row {
+display: flex;
+gap: 0.5rem;
+margin-bottom: 0.75rem;
+}
+
+.expense-row input {
+flex: 1;
+padding: 0.5rem;
+background: var(--input-bg);
+color: var(--text-color);
+border: 1px solid var(--border-color);
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+button {
+padding: 0.5rem 1rem;
+background: var(--primary-color);
+border: none;
+color: #fff;
+border-radius: 4px;
+cursor: pointer;
+font-weight: bold;
+}
+
+button:hover {
+background: var(--primary-hover);
+}
+
+button[type="button"] {
+margin-top: 0.5rem;
+}

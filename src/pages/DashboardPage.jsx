@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DashboardPage.css';
+import './css/DashboardPage.css';
 
 function DashboardSkeleton() {
   // Hard-coded for skeleton UI
@@ -68,6 +68,9 @@ function DashboardSkeleton() {
 
         <button type="button" onClick={handleAddRow}>
           + Add Expense Category
+        </button>
+        <button type="submit" onClick={handleSubmit}>
+          Submit Expense Categories
         </button>
       </div>
     </div>

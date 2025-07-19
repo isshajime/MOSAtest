@@ -1,4 +1,4 @@
-import './SetupPage.css';
+import './css/SetupPage.css';
 
 import React from 'react';
 

@@ -1,0 +1,77 @@
+/* ProfilePage.css */
+
+/* Dark-mode friendly color palette */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1f1f1f;
+    --text-color: #e0e0e0;
+    --subtext-color: #aaaaaa;
+    --border-color: #333333;
+    --primary-color: #3a8dde;
+    --primary-hover: #5a9ef0;
+  }
+  
+  .profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--text-color);
+  }
+  
+  .profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-card h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .profile-card .email {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.9rem;
+    color: var(--subtext-color);
+    word-break: break-all;
+  }
+  
+  .profile-card .occupation {
+    margin: 0.25rem 0 1.5rem;
+    font-size: 1rem;
+    color: var(--subtext-color);
+  }
+  
+  .edit-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+  }
+  
+  .edit-btn:hover {
+    background: var(--primary-hover);
+  }
+  
