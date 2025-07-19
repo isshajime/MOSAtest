@@ -7,6 +7,7 @@ import Header from './components/layout/Header.jsx';
 import Title from './Title.jsx'
 import Income from './Income.jsx'
 import Footer from './components/layout/Footer.jsx';
+import DashboardPage from './pages/DashboardPage';
 
 
 /**
@@ -33,7 +34,8 @@ function App() {
     <div className="AppSetupPage">
       <Header />
       {/* <Title /> */}
-      <SetupPage />
+      <DashboardPage />
+      {/* <SetupPage /> */}
       {/* <LoginPage /> */}
       {/* <Income /> */}
       <Footer />
